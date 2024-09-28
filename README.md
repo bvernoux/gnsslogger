@@ -32,39 +32,40 @@ It provides real-time GNSS data processing, logging, and monitoring capabilities
    ```
 
 2. Create a build directory and run CMake:
-For Windows (Visual Studio 2022):
-   ```
-   rm -rf build_VS2022
-   mkdir build_VS2022 && cd build_VS2022
-   cmake -G "Visual Studio 17 2022" -A x64 -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
-   ```
-For Windows MinGW64:
-   ```
-   rm -rf build_MinGW64
-   mkdir build_MinGW64 && cd build_MinGW64
-   cmake -G "MinGW Makefiles" -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
-   ```
-For GNU/Linux:
-   ```
-   rm -rf build
-   mkdir build && cd build
-   cmake -DBUILD_TESTS=ON ..
-   cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
+
+   For Windows (Visual Studio 2022):
+      ```
+      rm -rf build_VS2022
+      mkdir build_VS2022 && cd build_VS2022
+      cmake -G "Visual Studio 17 2022" -A x64 -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
+      ```
+   For Windows MinGW64:
+      ```
+      rm -rf build_MinGW64
+      mkdir build_MinGW64 && cd build_MinGW64
+      cmake -G "MinGW Makefiles" -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
+      ```
+   For GNU/Linux:
+      ```
+      rm -rf build
+      mkdir build && cd build
+      cmake -DBUILD_TESTS=ON ..
+      cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release ..
    ```
 
-3. Build the project:
-For Windows (Visual Studio 2022):
-Open the sln
-
-For MinGW64 and GNU/Linux:
-   ```
-   cmake --build .
-   ```
-
-   For a specific build type (e.g., Debug):
-   ```
-   cmake --build . --config Debug
-   ```
+4. Build the project:
+   For Windows (Visual Studio 2022):
+   Open the sln
+   
+   For MinGW64 and GNU/Linux:
+      ```
+      cmake --build .
+      ```
+   
+      For a specific build type (e.g., Debug):
+      ```
+      cmake --build . --config Debug
+      ```
 
 ## Usage
 
