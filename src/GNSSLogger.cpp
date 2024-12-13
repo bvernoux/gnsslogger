@@ -28,9 +28,10 @@
 
 bool ActualSerialPort::open(const std::string& port, int baudRate) {
 #ifdef _WIN32
-	m_hSerial = CreateFileA(port.c_str(), GENERIC_READ, 0, 0, OPEN_EXISTING, 0, 0);
+	std::string fullPortName = "\\\\.\\" + port;
+	m_hSerial = CreateFileA(fullPortName.c_str(), GENERIC_READ, 0, 0, OPEN_EXISTING, 0, 0);
 	if (m_hSerial == INVALID_HANDLE_VALUE) {
-		m_lastError = "Failed to open port: " + std::to_string(GetLastError());
+		m_lastError = "Failed to open port: " + fullPortName + " Err:" + std::to_string(GetLastError());
 		return false;
 	}
 

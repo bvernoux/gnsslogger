@@ -75,6 +75,7 @@ std::map<std::string, std::string> parseArguments(int argc, char* argv[]) {
 }
 
 int main(int argc, char* argv[]) {
+	std::cout << argv[0] << " v1.0 13 Dec 2024\n";
 	if (argc < 2) {
 		printUsage(argv[0]);
 		return 1;
